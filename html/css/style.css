@@ -1,0 +1,226 @@
+/* Projektin tyylit */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --teksti: #333333;
+    --tausta: #eeeeee;
+    --teksti-vaalea: #dddddd;
+    --bg-dark: #444444;
+    --bg-cell1: #C7C7C7;
+    --bg-cell2: #DDDDDD;
+    --highlight: #87af19;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Yleiskäyttöisiä tyylejä */
+
+/* Vertikaalista keskittämistä */
+.v-center {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+/* Horisontaalinen oikea tasaus */
+.h-right {
+    position: absolute;
+    right: 0;
+
+}
+
+/* Highlight */
+.highlight {
+    color: var(--highlight);
+    display: inline-block;
+    transform: rotate(10deg);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--tausta);
+    color: var(--teksti);
+}
+
+/* Header */
+header {
+    z-index: 1;
+    background-color: var(--bg-dark);
+    color: var(--teksti-vaalea);
+    padding: 10px;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: var(--highlight) solid 5px;
+}
+
+header .logo {
+    float: left;
+    font-size: 1.8em;
+}
+
+header .logo img {
+    height: 60px;
+    padding: 5px;
+    display: block;
+    float: left;
+}
+
+
+header nav a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: var(--teksti-vaalea);
+    text-decoration: none;
+    padding: 30px 0.5em;
+}
+
+header nav a:hover{
+    color: var(--teksti);
+    background-color: var(--highlight);
+}
+
+.ingressi {
+    font-size: 1.2em;
+    font-style: italic;
+    line-height: 1.5em;
+}
+
+.ingressi::first-letter {
+    float: left;
+    font-size: 3em;
+    line-height: 1em;
+    font-weight: bold;
+    margin-right: 0.1em;
+}
+
+/* main-lohkon tyylit */
+main {
+    font-size: 1em;
+    line-height: 1em;
+    padding-top: 80px;
+
+}
+
+/* section-lohkon tyylit */
+
+section {
+    max-width: 900px;
+    width: 70%;
+    margin: 20px auto;
+}
+
+/* showcase */
+.showcase {
+    background-image: url("../img/screenofcode.jpg");
+    color: var(--teksti-vaalea);
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    margin: 0 auto;
+    height: 300px;
+    font-size: 1.7em;
+    line-height: 1.7em;
+}
+
+/* Ammattitaitovaatimukset */
+.ammattitaitovaatimukset {
+    padding: 0px 50px;
+    margin-bottom: 60px
+}
+
+.ammattitaitovaatimukset > li {
+    list-style-type: none;
+}
+
+.ammattitaitovaatimukset > li > ul {
+    border-left: var(--highlight) solid 5px;
+}
+
+.ammattitaitovaatimukset > li > ul > li {
+    padding: 1px;
+    list-style-type: square;
+}
+
+.jarjestysnumero {
+    text-align: right;
+    font-size: 0.7em;
+}
+
+/* Tutkinnot */
+.tutkinnot a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--bg-dark);
+    color: var(--teksti-vaalea);
+    border: 1px solid var(--teksti);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.tutkinnot a:hover{
+    color: var(--teksti);
+    background-color: var(--highlight);
+}
+
+.tutkinnot p {
+    background-color:var(--bg-cell1);
+    text-align: center;
+    padding: 20px;
+    margin-block-start: -1em;
+    border-radius: 0px 0px 10px 10px;
+}
+
+footer {
+    background-color: var(--bg-dark);
+    color: var(--teksti-vaalea);
+    padding: 40px;
+    text-align: center;
+}
+
+/* tablen tyylit */
+.taulukko { 
+    border-spacing: 0.2em 0.4em;
+}
+
+th {
+    transform: rotate(-10deg);
+    background-color: var(--highlight);
+    color: var(--teksti-vaalea);
+    font-size: 1.2em;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    border: 3px solid #a8ce40;
+    border-radius: 70px;
+    border-end-start-radius: 10px;
+    border-start-end-radius: 10px;
+}
+
+tbody td { 
+    margin-left: 40px;
+    display: block;
+    max-height: 200px;
+    padding: 1em 2em;
+    border-radius: 20px;
+    background-color: var(--bg-cell1);
+}
+
+.taulukko > tbody > tr {
+    border-left: var(--highlight) solid 10px;
+    display: block;
+    padding: 15px 0px;
+}
+
+.taulukko > tbody td:nth-child(even) {
+    background-color: var(--bg-cell2);
+  }
