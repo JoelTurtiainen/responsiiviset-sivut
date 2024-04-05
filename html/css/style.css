@@ -117,7 +117,7 @@ section {
 
 /* showcase */
 .showcase {
-    background-image: url("../img/screenofcode.jpg");
+    background-image: url("../img/binary.jpg");
     color: var(--teksti-vaalea);
     width: 100%;
     max-width: 100%;
@@ -125,8 +125,17 @@ section {
     text-align: center;
     margin: 0 auto;
     height: 300px;
-    font-size: 1.7em;
+    font-size: 1.9em;
     line-height: 1.7em;
+    text-shadow:
+        -1px -1px 0 var(--teksti),
+        0   -1px 0 var(--teksti),
+        1px -1px 0 var(--teksti),
+        1px  0   0 var(--teksti),
+        1px  1px 0 var(--teksti),
+        0    1px 0 var(--teksti),
+        -1px  1px 0 var(--teksti),
+        -1px  0   0 var(--teksti);
 }
 
 /* Ammattitaitovaatimukset */
@@ -141,6 +150,7 @@ section {
 
 .ammattitaitovaatimukset > li > ul {
     border-left: var(--highlight) solid 5px;
+    background-color: var(--bg-cell2);
 }
 
 .ammattitaitovaatimukset > li > ul > li {
@@ -151,6 +161,11 @@ section {
 .jarjestysnumero {
     text-align: right;
     font-size: 0.7em;
+}
+/* Arviointi */
+.tasot {
+    display: block;
+    text-align: center;
 }
 
 /* Tutkinnot */
@@ -187,40 +202,52 @@ footer {
     text-align: center;
 }
 
-/* tablen tyylit */
-.taulukko { 
-    border-spacing: 0.2em 0.4em;
+/* Tutkinnon muodostuminen sivun tyylit*/
+.tutkintonimikkeet {
+    font-size: 1.1em;
 }
 
-th {
+.tutkintonimikkeet > ul{
+    border-left: var(--highlight) solid 5px;
+    background-color: var(--bg-cell2);
+}
+
+.tutkintonimikkeet > ul > li{
+    padding: 10px;
+}
+
+
+/* Kriteerit listan tyylit */
+.kriteerit > ul > li {
+    border-left: var(--highlight) solid 10px;
+    list-style-type: none;
+    padding: 15px 0px;
+}
+
+.kriteerit > ul > li > h3{
     transform: rotate(-10deg);
     background-color: var(--highlight);
     color: var(--teksti-vaalea);
     font-size: 1.2em;
     width: 150px;
     height: 50px;
-    padding: 10px;
+    padding: 10px 0.8em;
     border: 3px solid #a8ce40;
     border-radius: 70px;
     border-end-start-radius: 10px;
     border-start-end-radius: 10px;
 }
 
-tbody td { 
+.kriteerit > ul > li > ul > li{ 
+    list-style-type: square;
+    list-style-position: inside;
     margin-left: 40px;
-    display: block;
     max-height: 200px;
     padding: 1em 2em;
     border-radius: 20px;
     background-color: var(--bg-cell1);
 }
 
-.taulukko > tbody > tr {
-    border-left: var(--highlight) solid 10px;
-    display: block;
-    padding: 15px 0px;
-}
-
-.taulukko > tbody td:nth-child(even) {
+.kriteerit > ul > li > ul li:nth-child(even) {
     background-color: var(--bg-cell2);
   }
