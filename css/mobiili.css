@@ -1,0 +1,35 @@
+/* Mobiili-tyylit */
+@media only screen and (max-width: 800px) {
+    /*
+    Asetetaan elementit allekkain 100% leveydelle
+    */
+    header,
+    header > div.logo,
+    header > nav,
+    header nav a,
+    section,
+    main {
+        display: block;
+        float: none;
+        width: 100%;
+        height: auto;
+        /* text-align: center; */
+        clear: both;
+        padding: 5px 0px;
+        position: relative;
+    }
+
+    header nav {
+        text-align: center;
+    }
+    
+    .v-center, .h-right {
+        display: block;
+        position: relative;
+        transform: none;
+    }
+    .kriteerit > ul > li,
+    .kriteerit > ul > li > ul > li{ 
+        margin-left: 0;
+    }
+}
